@@ -8,6 +8,8 @@ import { SliceComponentProps } from "@prismicio/react";
 import LineChartBurn from "@/components/LineChartBurn";
 import LineChartTVL from "@/components/LineChartTVL";
 import LineChartM from "@/components/LineChartM";
+import LineChartPrice from "@/components/LineChartPrice";
+import LineChartPriceA from "@/components/LineChartPriceA";
 
 /**
  * Props for `LineChart`.
@@ -27,6 +29,14 @@ const LineChart = ({ slice }: LineChartProps): JSX.Element => {
     <h1 className=" text-balance flex-auto text-center text-4xl">Stats</h1>
     <div className="flex flex-col items-center justify-center px-4 md:px-8 xl:px-10 py-20">
       <div className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 w-full gap-20 mx-auto">
+      <div className="glass-container mx-auto w-auto">
+      <h2 className="text-balance flex text-center max-w-xl text-2xl mb-5 xl:px-10">Price in USD (30 D)</h2>
+      <LineChartPrice />
+      </div>
+      <div className="glass-container mx-auto">
+      <h2 className="text-balance flex text-center max-w-xl text-2xl mb-5 xl:px-10">Price in USD (All Time)</h2>
+      <LineChartPriceA />
+      </div>
       <div className="glass-container mx-auto">
       <h2 className="text-balance flex text-center max-w-xl text-2xl mb-5 xl:px-10">Total Supply in B</h2>
         <LineChartX />
