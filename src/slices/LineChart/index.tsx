@@ -10,6 +10,7 @@ import LineChartTVL from "@/components/LineChartTVL";
 import LineChartM from "@/components/LineChartM";
 import LineChartPrice from "@/components/LineChartPrice";
 import LineChartPriceA from "@/components/LineChartPriceA";
+import TokenData from "@/components/TokenData";
 
 /**
  * Props for `LineChart`.
