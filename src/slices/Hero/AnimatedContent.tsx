@@ -9,6 +9,7 @@ import { PrismicRichText, PrismicText, SliceComponentProps } from "@prismicio/re
 import gsap from "gsap";
 import { useGSAP } from '@gsap/react';
 import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
+import { Vortex } from '@/components/vortex';
 
 export default function AnimatedContent({slice}: {slice:Content.HeroSlice;
 
@@ -39,8 +40,14 @@ export default function AnimatedContent({slice}: {slice:Content.HeroSlice;
 
 
   return (
+    <Vortex
+    backgroundColor="transparent"
+    rangeY={800}
+    particleCount={500}
+    baseHue={120}
+    className="flex items-center flex-col justify-center px-2 md:px-10  py-4 w-full h-full"
+  >
     <div className="relative" ref={container}>
-    <StarGrid />
     {isFilled.richText(slice.primary.heading) && (
       <h1 className="hero__heading text-balance text-5xl font-medium md:text-7x1 opacity-0">
       <PrismicText field={slice.primary.heading} />
@@ -66,5 +73,6 @@ export default function AnimatedContent({slice}: {slice:Content.HeroSlice;
     </div>    
     )}
     </div>
+    </Vortex>
   );
 }

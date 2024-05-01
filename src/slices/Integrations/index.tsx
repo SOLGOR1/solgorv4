@@ -2,8 +2,6 @@
 import Bounded from "@/components/Bounded";
 import { Content } from "@prismicio/client";
 import { PrismicRichText, PrismicText, SliceComponentProps } from "@prismicio/react";
-import StarBackground from "./StarBackground";
-import Image from "next/image";
 
 
 import StylizedLogoMark from "./StylizedLogoMark";
@@ -31,7 +29,7 @@ const Integrations = ({ slice }: IntegrationsProps): JSX.Element => {
       className="relative overflow-hidden bg-black"
     >
             <Vortex
-        backgroundColor="black"
+        backgroundColor="transparent"
         rangeY={800}
         particleCount={500}
         baseHue={120}
