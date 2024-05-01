@@ -99,7 +99,6 @@ export type BlogDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<BlogDocumentData>, "blog", Lang>;
 
 type PageDocumentDataSlicesSlice =
-  | CardsliceSlice
   | LineChartSlice
   | CallToActionSlice
   | IntegrationsSlice
@@ -597,36 +596,6 @@ export type CallToActionSlice = prismic.SharedSlice<
 >;
 
 /**
- * Default variation for Cardslice Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type CardsliceSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Record<string, never>,
-  never
->;
-
-/**
- * Slice variation for *Cardslice*
- */
-type CardsliceSliceVariation = CardsliceSliceDefault;
-
-/**
- * Cardslice Shared Slice
- *
- * - **API ID**: `cardslice`
- * - **Description**: Cardslice
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type CardsliceSlice = prismic.SharedSlice<
-  "cardslice",
-  CardsliceSliceVariation
->;
-
-/**
  * Primary content in *Hero → Primary*
  */
 export interface HeroSliceDefaultPrimary {
@@ -1113,9 +1082,6 @@ declare module "@prismicio/client" {
       CallToActionSliceDefaultPrimary,
       CallToActionSliceVariation,
       CallToActionSliceDefault,
-      CardsliceSlice,
-      CardsliceSliceVariation,
-      CardsliceSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
