@@ -29,8 +29,8 @@ const salesData = [
     burn: 11 ,
   },
   {
-    name: 'Apr 30',
-    burn: 11 ,
+    name: 'May 01',
+    burn: 23 ,
   },
 ];
 
