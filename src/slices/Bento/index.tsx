@@ -122,7 +122,7 @@ const Bento = ({ slice }: BentoProps): JSX.Element => {
         >
           <p>Say goodbye to worries of rug pulls!</p>
           <p></p>
-          <p>Solgor's commitment to transparency means that every Liquidity Pool token,
+          <p>Solgor&apos;s commitment to transparency means that every Liquidity Pool token,
               has been consigned to the flames,
               ensuring a rock-solid foundation.</p>
         </CardItem>
@@ -185,7 +185,7 @@ const Bento = ({ slice }: BentoProps): JSX.Element => {
           <p>Watch as Solgor implements its burn mechanism,
           steadily reducing GOR tokens over time to increase their rarity and value.</p>
           <p></p>
-          <p>With each burn, the fire of Solgor's potential burns brighter.</p>
+          <p>With each burn, the fire of Solgor&apos;s potential burns brighter.</p>
         </CardItem>
         <CardItem
           translateZ="100"
@@ -243,7 +243,7 @@ const Bento = ({ slice }: BentoProps): JSX.Element => {
           translateZ="60"
           className="text-neutral-200 text-sm max-w-sm mt-2 dark:text-neutral-300 text-balance leading-normal"
         >
-          <p>Discover Solgor's unique NFT collection, where creativity reigns supreme.</p>
+          <p>Discover Solgor&apos;s unique NFT collection, where creativity reigns supreme.</p>
           <p></p>
           <p>Mint your own treasures, unlock VIP Discord access, and dive into a sea of giveaways and lotteries!</p>
         </CardItem>
