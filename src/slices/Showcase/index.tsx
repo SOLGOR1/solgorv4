@@ -62,16 +62,17 @@ const Showcase = ({ slice }: ShowcaseProps): JSX.Element => {
       {slice.primary.button_text || "Learn More"}
       </ButtonLink>
   </div>
-    <PrismicNextImage 
-    alt=""
-    field={slice.primary.image} 
-    className={clsx(
-      "max-w-[700px] max-h-[700px]",
-      "opacity-90 shadow-2xl lg:col-span-2 lg:pt-0 rounded-xl", 
-      slice.variation == "reverse" ? 
-      "lg:order-1 lg:translate-x-[15%] rounded-xl" :
-      "lg:-order-1 lg:translate-x-[-15%] rounded-xl",
-      )} />  
+      <PrismicNextImage 
+        alt=""
+        field={slice.primary.image} 
+        className={clsx(
+          "w-full h-auto lg:max-w-[700px] lg:max-h-[700px]",
+          "opacity-90 shadow-2xl lg:col-span-2 lg:pt-0 rounded-xl", 
+          slice.variation == "reverse" ? 
+          "lg:order-1 lg:translate-x-[15%] rounded-xl" :
+          "lg:-order-1 lg:translate-x-[-15%] rounded-xl",
+          )}
+      />
 </div>
     </Bounded>
   );
