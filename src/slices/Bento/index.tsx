@@ -57,7 +57,7 @@ const Bento = ({ slice }: BentoProps): JSX.Element => {
         <CardItem
           as="p"
           translateZ="60"
-          className="text-neutral-200 text-sm max-w-sm mt-2 dark:text-neutral-300 text-balance leading-normal"
+          className="text-neutral-200 text-base max-w-sm mt-2 dark:text-neutral-300 text-balance leading-normal"
         >
           <p>Welcome to Solgor GOR, where fairness is the name of the game.</p>
           <p></p>
@@ -118,7 +118,7 @@ const Bento = ({ slice }: BentoProps): JSX.Element => {
         <CardItem
           as="p"
           translateZ="60"
-          className="text-neutral-200 text-sm max-w-sm mt-2 dark:text-neutral-300 text-balance leading-normal"
+          className="text-neutral-200 text-base max-w-sm mt-2 dark:text-neutral-300 text-balance leading-normal"
         >
           <p>Say goodbye to worries of rug pulls!</p>
           <p></p>
@@ -180,7 +180,7 @@ const Bento = ({ slice }: BentoProps): JSX.Element => {
         <CardItem
           as="p"
           translateZ="60"
-          className="text-neutral-200 text-sm max-w-sm mt-2 dark:text-neutral-300 text-balance leading-normal"
+          className="text-neutral-200 text-base max-w-sm mt-2 dark:text-neutral-300 text-balance leading-normal"
         >
           <p>Watch as Solgor implements its burn mechanism,
           steadily reducing GOR tokens over time to increase their rarity and value.</p>
@@ -241,10 +241,10 @@ const Bento = ({ slice }: BentoProps): JSX.Element => {
         <CardItem
           as="p"
           translateZ="60"
-          className="text-neutral-200 text-sm max-w-sm mt-2 dark:text-neutral-300 text-balance leading-normal"
+          className="text-neutral-200 text-base max-w-sm mt-2 dark:text-neutral-300 text-balance leading-normal"
         >
+          <p>Mint Now!</p>
           <p>Discover Solgor&apos;s unique NFT collection, where creativity reigns supreme.</p>
-          <p></p>
           <p>Mint your own treasures, unlock VIP Discord access, and dive into a sea of giveaways and lotteries!</p>
         </CardItem>
         <CardItem
@@ -301,7 +301,7 @@ const Bento = ({ slice }: BentoProps): JSX.Element => {
         <CardItem
           as="p"
           translateZ="60"
-          className="text-neutral-200 text-sm max-w-sm mt-2 dark:text-neutral-300 text-balance leading-normal"
+          className="text-neutral-200 text-base max-w-sm mt-2 dark:text-neutral-300 text-balance leading-normal"
         >
           <p>Get involved!</p>
           <p>Join our vibrant community at Solgor GOR to have your say! </p>
@@ -361,7 +361,7 @@ const Bento = ({ slice }: BentoProps): JSX.Element => {
         <CardItem
           as="p"
           translateZ="60"
-          className="text-neutral-200 text-sm max-w-sm mt-2 dark:text-neutral-300 text-balance leading-normal"
+          className="text-neutral-200 text-base max-w-sm mt-2 dark:text-neutral-300 text-balance leading-normal"
         >
           <p>Get ready to make a difference with Solgor!</p>
           <p>As our market cap climbs, so does our ability to support our gorilla brethren.</p>
