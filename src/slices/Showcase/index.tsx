@@ -66,6 +66,7 @@ const Showcase = ({ slice }: ShowcaseProps): JSX.Element => {
     alt=""
     field={slice.primary.image} 
     className={clsx(
+      "max-w-[700px] max-h-[700px]",
       "opacity-90 shadow-2xl lg:col-span-2 lg:pt-0 rounded-xl", 
       slice.variation == "reverse" ? 
       "lg:order-1 lg:translate-x-[15%] rounded-xl" :
