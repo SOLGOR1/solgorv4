@@ -365,7 +365,7 @@ const Bento = ({ slice }: BentoProps): JSX.Element => {
         >
           <p>Get ready to make a difference with Solgor!</p>
           <p>As our market cap climbs, so does our ability to support our gorilla brethren.</p>
-          <p>Join us in our mission and let's swing to new heights together.</p>
+          <p>Join us in our mission and let&apos;s swing to new heights together.</p>
         </CardItem>
         <CardItem
           translateZ="100"
