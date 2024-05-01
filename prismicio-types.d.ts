@@ -99,6 +99,7 @@ export type BlogDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<BlogDocumentData>, "blog", Lang>;
 
 type PageDocumentDataSlicesSlice =
+  | CardsliceSlice
   | LineChartSlice
   | CallToActionSlice
   | IntegrationsSlice
@@ -366,9 +367,93 @@ export type BentoSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *Bento → Primary*
+ */
+export interface BentoSliceNew1Primary {
+  /**
+   * Heading field in *Bento → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: italic for gold text
+   * - **API ID Path**: bento.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * Body field in *Bento → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bento.primary.body
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  body: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *Bento → Items*
+ */
+export interface BentoSliceNew1Item {
+  /**
+   * Titel field in *Bento → Items*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bento.items[].titel
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  titel: prismic.TitleField;
+
+  /**
+   * Body field in *Bento → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bento.items[].body
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  body: prismic.RichTextField;
+
+  /**
+   * image field in *Bento → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bento.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Wide field in *Bento → Items*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: bento.items[].wide
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  wide: prismic.BooleanField;
+}
+
+/**
+ * New1 variation for Bento Slice
+ *
+ * - **API ID**: `new1`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BentoSliceNew1 = prismic.SharedSliceVariation<
+  "new1",
+  Simplify<BentoSliceNew1Primary>,
+  Simplify<BentoSliceNew1Item>
+>;
+
+/**
  * Slice variation for *Bento*
  */
-type BentoSliceVariation = BentoSliceDefault;
+type BentoSliceVariation = BentoSliceDefault | BentoSliceNew1;
 
 /**
  * Bento Shared Slice
@@ -509,6 +594,36 @@ type CallToActionSliceVariation = CallToActionSliceDefault;
 export type CallToActionSlice = prismic.SharedSlice<
   "call_to_action",
   CallToActionSliceVariation
+>;
+
+/**
+ * Default variation for Cardslice Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CardsliceSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *Cardslice*
+ */
+type CardsliceSliceVariation = CardsliceSliceDefault;
+
+/**
+ * Cardslice Shared Slice
+ *
+ * - **API ID**: `cardslice`
+ * - **Description**: Cardslice
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CardsliceSlice = prismic.SharedSlice<
+  "cardslice",
+  CardsliceSliceVariation
 >;
 
 /**
@@ -984,8 +1099,11 @@ declare module "@prismicio/client" {
       BentoSlice,
       BentoSliceDefaultPrimary,
       BentoSliceDefaultItem,
+      BentoSliceNew1Primary,
+      BentoSliceNew1Item,
       BentoSliceVariation,
       BentoSliceDefault,
+      BentoSliceNew1,
       BlogSlice,
       BlogSliceDefaultPrimary,
       BlogSliceDefaultItem,
@@ -995,6 +1113,9 @@ declare module "@prismicio/client" {
       CallToActionSliceDefaultPrimary,
       CallToActionSliceVariation,
       CallToActionSliceDefault,
+      CardsliceSlice,
+      CardsliceSliceVariation,
+      CardsliceSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,

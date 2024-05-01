@@ -27,6 +27,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "cardslice": {
+              "type": "SharedSlice"
+            },
             "line_chart": {
               "type": "SharedSlice"
             },
