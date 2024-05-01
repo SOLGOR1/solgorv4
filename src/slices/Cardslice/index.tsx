@@ -19,6 +19,7 @@ export type CardsliceProps = SliceComponentProps<Content.CardsliceSlice>;
  */
 const Cardslice = ({ slice }: CardsliceProps): JSX.Element => {
   return (
+<Bounded>
 <div className="flex justify-center gap-6 -mt-40">
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-0 gap-x-10">
   <CardContainer className="glass-container row-span-3 flex grid-rows-subgrid gap-2 rounded-lg p-4 w-full sm:w-96">
@@ -387,6 +388,7 @@ const Cardslice = ({ slice }: CardsliceProps): JSX.Element => {
 
   </div>
   </div>
+  </Bounded>
   );
 };
 
