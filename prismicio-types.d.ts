@@ -99,6 +99,7 @@ export type BlogDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<BlogDocumentData>, "blog", Lang>;
 
 type PageDocumentDataSlicesSlice =
+  | PartnersSlice
   | LineChartSlice
   | CallToActionSlice
   | IntegrationsSlice
@@ -790,6 +791,36 @@ export type LineChartSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Default variation for Partners Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PartnersSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *Partners*
+ */
+type PartnersSliceVariation = PartnersSliceDefault;
+
+/**
+ * Partners Shared Slice
+ *
+ * - **API ID**: `partners`
+ * - **Description**: Partners
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PartnersSlice = prismic.SharedSlice<
+  "partners",
+  PartnersSliceVariation
+>;
+
+/**
  * Primary content in *RichText → Primary*
  */
 export interface RichTextSliceDefaultPrimary {
@@ -1094,6 +1125,9 @@ declare module "@prismicio/client" {
       LineChartSlice,
       LineChartSliceVariation,
       LineChartSliceDefault,
+      PartnersSlice,
+      PartnersSliceVariation,
+      PartnersSliceDefault,
       RichTextSlice,
       RichTextSliceDefaultPrimary,
       RichTextSliceVariation,

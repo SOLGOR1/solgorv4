@@ -26,7 +26,7 @@ const Integrations = ({ slice }: IntegrationsProps): JSX.Element => {
     <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="relative overflow-hidden bg-black"
+      className="relative overflow-hidden bg-transparent"
     >
             <Vortex
         backgroundColor="transparent"

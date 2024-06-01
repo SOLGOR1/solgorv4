@@ -32,6 +32,10 @@ const salesData = [
     name: 'May 01',
     burn: 23 ,
   },
+  {
+    name: 'Jun 01',
+    burn: 45 ,
+  },
 ];
 
 const LineChartComponent = () => {

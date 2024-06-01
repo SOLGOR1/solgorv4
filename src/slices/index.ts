@@ -9,6 +9,7 @@ export const components = {
   hero: dynamic(() => import("./Hero")),
   integrations: dynamic(() => import("./Integrations")),
   line_chart: dynamic(() => import("./LineChart")),
+  partners: dynamic(() => import("./Partners")),
   rich_text: dynamic(() => import("./RichText")),
   showcase: dynamic(() => import("./Showcase")),
 };
