@@ -111,8 +111,8 @@ const TokenInfo = () => {
                             <p><span className="font-bold">Name:</span> Solgor</p>
                             <p><span className="font-bold">Symbol:</span> GOR</p>
                             <p><span className="font-bold">Starting Supply:</span> 10,000,000,000</p>
-                            <p><span className="font-bold">Circulating Supply:</span> 9,954,474,773</p>
-                            <p><span className="font-bold">Burned:</span> 45,525,227</p>
+                            <p><span className="font-bold">Circulating Supply:</span> 9,929,671,776</p>
+                            <p><span className="font-bold">Burned:</span> 69,777,220</p>
                             <p><span className="font-bold">Average Price (SOL):</span> {averagePriceSol.toFixed(10)}</p>
                             <p><span className="font-bold">Average Price (USD):</span> ${averagePriceUsd.toFixed(6)}</p>
                             <p><span className="font-bold">Combined 24h Volume:</span> {combinedVolume24h.toFixed(2)}</p>

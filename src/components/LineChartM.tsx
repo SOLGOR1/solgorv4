@@ -36,6 +36,10 @@ const salesData = [
     name: 'Jun 01',
     MarketCap: 16.27 ,
   },
+  {
+    name: 'Jul 01',
+    MarketCap: 9.62 ,
+  },
 ];
 
 const LineChartComponent = () => {
