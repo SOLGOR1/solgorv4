@@ -44,6 +44,10 @@ const salesData = [
     name: 'Aug 01',
     TVL: 7.94 ,
   },
+  {
+    name: 'Sep 01',
+    TVL: 6.85 ,
+  },
 ];
 
 const LineChartComponent = () => {
