@@ -45,7 +45,7 @@ const salesData = [
     supply: 9.894 ,
   },
   {
-    name: 'Aug 01',
+    name: 'Sep 01',
     supply: 9.869 ,
   },
 ];
